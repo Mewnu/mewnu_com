@@ -24,9 +24,9 @@ class _HomePage2State extends State<HomePage2> {
     double width = MediaQuery.of(context).size.width;
     double padding = width / 6;
     double textSizeRow1 = width / 15.53;
-    double textSizeRow2 = width / 15.554;
+    double textSizeRow2 = width / 24.13;
     double textSizeRow3 = width / 16.5;
-    double titleSize4 = textSizeRow1 / 2.22;
+    double titleSize4 = width / 25.23;//37.58;
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -36,7 +36,7 @@ class _HomePage2State extends State<HomePage2> {
               padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
               color: Colors.grey[100],
               child: Container(
-                color: Colors.red,
+                // color: Colors.red,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -91,7 +91,7 @@ class _HomePage2State extends State<HomePage2> {
                           child: Text(
                             'tecnologias ',
                             style: TextStyle(
-                              fontSize: textSizeRow2 / 1.16,
+                              fontSize: textSizeRow2,
                               // color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
@@ -103,7 +103,7 @@ class _HomePage2State extends State<HomePage2> {
                           child: Text(
                             'que ',
                             style: TextStyle(
-                              fontSize: textSizeRow2 / 1.16,
+                              fontSize: textSizeRow2,
                               // color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
@@ -113,9 +113,9 @@ class _HomePage2State extends State<HomePage2> {
                           delay:
                               Duration(milliseconds: 0), //milliseconds: 200),
                           child: Text(
-                            'a ',
+                            'as ',
                             style: TextStyle(
-                              fontSize: textSizeRow2 / 1.16,
+                              fontSize: textSizeRow2,
                               // color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
@@ -125,9 +125,9 @@ class _HomePage2State extends State<HomePage2> {
                           delay:
                               Duration(milliseconds: 0), //milliseconds: 200),
                           child: Text(
-                            'Google',
+                            'multinacionais.',
                             style: TextStyle(
-                              fontSize: textSizeRow2 / 1.16,
+                              fontSize: textSizeRow2,
                               // color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
@@ -140,45 +140,9 @@ class _HomePage2State extends State<HomePage2> {
                       children: [
                         DelayedDisplay(
                           delay:
-                              Duration(milliseconds: 0), //milliseconds: 2600),
-                          child: Text(
-                            'trabalhamos ',
-                            style: TextStyle(
-                              fontSize: titleSize4,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                         DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2400),
-                          child: Text(
-                            'apenas ',
-                            style: TextStyle(
-                              fontSize: titleSize4,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2800),
-                          child: Text(
-                            'com ',
-                            style: TextStyle(
-                              fontSize: titleSize4,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
                               Duration(milliseconds: 0), //milliseconds: 3000),
                           child: Text(
-                            'as ',
+                            'As ',
                             style: TextStyle(
                               fontSize: titleSize4,
                               // color: Colors.white,
@@ -191,6 +155,18 @@ class _HomePage2State extends State<HomePage2> {
                               Duration(milliseconds: 0), //milliseconds: 3200),
                           child: Text(
                             'melhores ',
+                            style: TextStyle(
+                              fontSize: titleSize4,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 3200),
+                          child: Text(
+                            'tecnologias ',
                             style: TextStyle(
                               fontSize: titleSize4,
                               // color: Colors.white,
@@ -255,7 +231,7 @@ class _HomePage2State extends State<HomePage2> {
                                     children: [
                                       Container(
                                         child: Text(
-                                          'consultar prazos   ',
+                                          'ver tecnologias   ',
                                           style: TextStyle(
                                             fontFamily: 'Red_Hat_Text',
                                             fontSize: textSizeRow3 / 2.39,
@@ -314,7 +290,7 @@ class _HomePage2State extends State<HomePage2> {
                                 ImageFilter.blur(sigmaX: 12.0, sigmaY: 12.0),
                             child: AnimatedContainer(
                               duration: Duration(milliseconds: 400),
-                              color: Colors.grey[100].withOpacity(0.9),
+                              color: Colors.grey[100].withOpacity(0.94),
                             ),
                           ),
                         ),

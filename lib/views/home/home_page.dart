@@ -22,7 +22,12 @@ class HomePage extends StatelessWidget {
 
 // class _HomePageState extends State<HomePage> {
   SwiperController swiperController = SwiperController();
-  List<Widget> navigationPages = [HomePage1(), HomePage2(), HomePage3(), HomePage4()];
+  List<Widget> navigationPages = [
+    HomePage1(),
+    HomePage2(),
+    HomePage3(),
+    HomePage4(),
+  ];
   @override
   Widget build(BuildContext context) {
     // double padding = MediaQuery.of(context).size.width / 6;

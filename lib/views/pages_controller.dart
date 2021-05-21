@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import "dart:ui";
 import "package:flutter_card_swipper/flutter_card_swiper.dart";
 import "package:flutter_neumorphic/flutter_neumorphic.dart";
 import 'package:mewnu/views/contact/contact_page.dart';
 import 'package:mewnu/views/home/home_page.dart';
 import 'package:mewnu/views/components/navigator_bar.dart';
-
 import 'package:mewnu/views/components/navigator_controller.dart';
-import 'package:rx_notifier/rx_notifier.dart';
 
 class PagesController extends StatefulWidget {
   @override
@@ -39,7 +36,7 @@ class _PagesControllerState extends State<PagesController> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> navigationPages = [HomePage(), ContactPage()];//[ContactPage(), Container()];
+    List<Widget> navigationPages = [HomePage(),ContactPage()];//[ContactPage(), Container()];HomePage(), 
     return Scaffold(
       body: Stack(
         children: [
@@ -49,7 +46,6 @@ class _PagesControllerState extends State<PagesController> {
             scrollDirection: Axis.horizontal,
             loop: false,
             onIndexChanged: (index) {
-              // print(constraints.maxWidth);
               navigatorController.setCurrentSwiperIndex(index);
             },
             itemBuilder: (BuildContext context, int index) {
@@ -60,7 +56,6 @@ class _PagesControllerState extends State<PagesController> {
             onTap: (i) => onTap(i),
             onIndexChanged: onIndexChanged,
             navigatorController: navigatorController,
-            // mobile: constraints.maxWidth > 578 ? false : true,
           ),
         ],
       ),

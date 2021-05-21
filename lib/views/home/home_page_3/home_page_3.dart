@@ -22,10 +22,11 @@ class _HomePage3State extends State<HomePage3> {
 
   @override
   Widget build(BuildContext context) {
-       double width = MediaQuery.of(context).size.width;
+    double width = MediaQuery.of(context).size.width;
     double padding = width / 6;
-    double titleSize = width / 13.4;
-    double titleSize3 = (width / 16.5);
+    double titleSize = width / 13.15;
+    double titleSize3 = width / 31.5;
+    double titleSize4 = width / 16.5;
     return LayoutBuilder(
       builder: (context, constraints) {
         return Stack(
@@ -33,219 +34,225 @@ class _HomePage3State extends State<HomePage3> {
             Container(
               padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
               color: Colors.grey[100],
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: padding / 4),
-                  Row(
-                    children: [
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 600),
-                        slidingBeginOffset: Offset(0.0, -0.35),
-                        child: Text(
-                          'Damos ',
-                          style: TextStyle(
-                            fontSize: titleSize,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+              child: Container(
+                // color: Colors.red,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: padding / 4),
+                    Row(
+                      children: [
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 600),
+                          slidingBeginOffset: Offset(0.0, -0.35),
+                          child: Text(
+                            'Damos ',
+                            style: TextStyle(
+                              fontSize: titleSize,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 800),
-                        child: Text(
-                          'vida ',
-                          style: TextStyle(
-                            fontSize: titleSize,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 800),
+                          child: Text(
+                            'vida ',
+                            style: TextStyle(
+                              fontSize: titleSize,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 1000),
-                        child: Text(
-                          'ao ',
-                          style: TextStyle(
-                            fontSize: titleSize,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 1000),
+                          child: Text(
+                            'ao ',
+                            style: TextStyle(
+                              fontSize: titleSize,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 1200),
-                        child: Text(
-                          'seu',
-                          style: TextStyle(
-                            fontSize: titleSize,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 1200),
+                          child: Text(
+                            'seu',
+                            style: TextStyle(
+                              fontSize: titleSize,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 200),
-                        child: Text(
-                          'projeto.',
-                          style: TextStyle(
-                            fontSize: titleSize,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                          ),
+                      ],
+                    ),
+                    DelayedDisplay(
+                      delay: Duration(milliseconds: 0), //milliseconds: 200),
+                      child: Text(
+                        'projeto.',
+                        style: TextStyle(
+                          fontSize: titleSize,
+                          // color: Colors.white,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
-                    ],
-                  ),
-                  SizedBox(height: padding / 8),
-                  Row(
-                    children: [
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 2400),
-                        child: Text(
-                          'Focamos ',
-                          style: TextStyle(
-                            fontSize: titleSize / 2.39,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                    ),
+                    SizedBox(height: padding / 8),
+                    Row(
+                      children: [
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 2400),
+                          child: Text(
+                            'Focamos ',
+                            style: TextStyle(
+                              fontSize: titleSize3,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 2600),
-                        child: Text(
-                          'na perfeição ',
-                          style: TextStyle(
-                            fontSize: titleSize / 2.39,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 2600),
+                          child: Text(
+                            'na perfeição ',
+                            style: TextStyle(
+                              fontSize: titleSize3,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 2800),
-                        child: Text(
-                          'sem ',
-                          style: TextStyle(
-                            fontSize: titleSize / 2.39,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 2800),
+                          child: Text(
+                            'sem ',
+                            style: TextStyle(
+                              fontSize: titleSize3,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 3000),
-                        child: Text(
-                          'perder ',
-                          style: TextStyle(
-                            fontSize: titleSize / 2.39,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 3000),
+                          child: Text(
+                            'perder ',
+                            style: TextStyle(
+                              fontSize: titleSize3,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 3200),
-                        child: Text(
-                          'os ',
-                          style: TextStyle(
-                            fontSize: titleSize / 2.39,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 3200),
+                          child: Text(
+                            'os ',
+                            style: TextStyle(
+                              fontSize: titleSize3,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 3400),
-                        child: Text(
-                          'prazos.',
-                          style: TextStyle(
-                            fontSize: titleSize / 2.39,
-                            // color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 3400),
+                          child: Text(
+                            'prazos.',
+                            style: TextStyle(
+                              fontSize: titleSize3,
+                              // color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: padding / 8),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      DelayedDisplay(
-                        delay: Duration(milliseconds: 0), //milliseconds: 2400),
-                        child: InkWell(
-                          onTap: () {
-                            setState(() {
-                              _showDeadlines = true;
-                            });
-                          },
-                          onHover: (value) {
-                            setState(() {
-                              _isHover = value;
-                            });
-                          },
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // CustomPaint(
-                              //   painter: ShapePainter(),
-                              //   child: Container(),
-                              // ),
-                              Padding(
-                                padding: const EdgeInsets.all(2.0),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      child: Text(
-                                        'consultar prazos   ',
-                                        style: TextStyle(
-                                          fontFamily: 'Red_Hat_Text',
-                                          fontSize: titleSize3 / 2.39,
-                                          color: Colors.grey[400],
-                                          fontWeight: FontWeight.w100,
+                      ],
+                    ),
+                    SizedBox(height: padding / 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        DelayedDisplay(
+                          delay:
+                              Duration(milliseconds: 0), //milliseconds: 2400),
+                          child: InkWell(
+                            onTap: () {
+                              setState(() {
+                                _showDeadlines = true;
+                              });
+                            },
+                            onHover: (value) {
+                              setState(() {
+                                _isHover = value;
+                              });
+                            },
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(2.0),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: Text(
+                                          'consultar prazos   ',
+                                          style: TextStyle(
+                                            fontFamily: 'Red_Hat_Text',
+                                            fontSize: titleSize4 / 2.39,
+                                            color: Colors.grey[400],
+                                            fontWeight: FontWeight.w100,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: titleSize3 / 10,
-                                        right: titleSize3 / 6,
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          top: titleSize4 / 10,
+                                        ),
+                                        child: Icon(
+                                          Icons.call_made,
+                                          size: titleSize4 / 2.6,
+                                          color: Colors.grey[400],
+                                        ),
                                       ),
-                                      child: Icon(
-                                        Icons.call_made,
-                                        size: titleSize3 / 2.6,
-                                        color: Colors.grey[400],
-                                      ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              AnimatedContainer(
-                                duration: Duration(milliseconds: 200),
-                                height: _isHover || _showDeadlines ? 24 : 0,
-                                width: titleSize3 * 3.7,
-                                decoration: BoxDecoration(
-                                  border: Border(
-                                    top: BorderSide(
-                                      color: Colors.grey[200],
-                                      width: _isHover || _showDeadlines ? 4 : 1,
+                                AnimatedContainer(
+                                  duration: Duration(milliseconds: 200),
+                                  height: _isHover || _showDeadlines ? 24 : 0,
+                                  width: titleSize4 * 3.7,
+                                  decoration: BoxDecoration(
+                                    border: Border(
+                                      top: BorderSide(
+                                        color: Colors.grey[200],
+                                        width:
+                                            _isHover || _showDeadlines ? 4 : 1,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Align(
@@ -260,7 +267,7 @@ class _HomePage3State extends State<HomePage3> {
                                 ImageFilter.blur(sigmaX: 12.0, sigmaY: 12.0),
                             child: AnimatedContainer(
                               duration: Duration(milliseconds: 400),
-                              color: Colors.grey[100].withOpacity(0.9),
+                              color: Colors.grey[100].withOpacity(0.94),
                             ),
                           ),
                         ),

@@ -9,15 +9,18 @@ class HomePage1 extends StatefulWidget {
 class _HomePage1State extends State<HomePage1> {
   @override
   Widget build(BuildContext context) {
-    double padding = MediaQuery.of(context).size.width / 6;
-    double titleSize = MediaQuery.of(context).size.width / 21.2;
+    double width = MediaQuery.of(context).size.width;
+    double padding = width / 6;
+    double titleSize = width / 20.9;
+    double titleSize2 = width / 18.36;
+    double titleSize3 = width / 17.86;
     return Container(
       padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
       height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
+      width: width,
       color: Colors.black,
       child: Container(
-        // color: Colors.red,
+        // color: Colors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,7 +74,7 @@ class _HomePage1State extends State<HomePage1> {
                 DelayedDisplay(
                   delay: Duration(milliseconds: 600),
                   child: Text(
-                    'lugares ',
+                    'lugares',
                     style: TextStyle(
                       fontSize: titleSize,
                       color: Colors.white,
@@ -88,7 +91,7 @@ class _HomePage1State extends State<HomePage1> {
                   child: Text(
                     'e ',
                     style: TextStyle(
-                      fontSize: titleSize * 1.137,
+                      fontSize: titleSize2,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
@@ -99,7 +102,7 @@ class _HomePage1State extends State<HomePage1> {
                   child: Text(
                     'em ',
                     style: TextStyle(
-                      fontSize: titleSize * 1.137,
+                      fontSize: titleSize2,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
@@ -110,7 +113,7 @@ class _HomePage1State extends State<HomePage1> {
                   child: Text(
                     'todos ',
                     style: TextStyle(
-                      fontSize: titleSize * 1.137,
+                      fontSize: titleSize2,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
@@ -121,7 +124,7 @@ class _HomePage1State extends State<HomePage1> {
                   child: Text(
                     'os ',
                     style: TextStyle(
-                      fontSize: titleSize * 1.137,
+                      fontSize: titleSize2,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
@@ -130,9 +133,9 @@ class _HomePage1State extends State<HomePage1> {
                 DelayedDisplay(
                   delay: Duration(milliseconds: 1100),
                   child: Text(
-                    'momentos. ',
+                    'momentos.',
                     style: TextStyle(
-                      fontSize: titleSize * 1.13,
+                      fontSize: titleSize2,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
@@ -147,7 +150,7 @@ class _HomePage1State extends State<HomePage1> {
                   child: Text(
                     'Sempre a sua disposição.',
                     style: TextStyle(
-                      fontSize: titleSize * 1.17,
+                      fontSize: titleSize3,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),

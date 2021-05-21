@@ -21,7 +21,7 @@ class _HomePage2TechsState extends State<HomePage2Techs> {
       width: width,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -80,137 +80,261 @@ class _HomePage2TechsState extends State<HomePage2Techs> {
               ),
             ],
           ),
-          SizedBox(height: 16),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 400),
-                slidingBeginOffset: Offset(0.0, -0.35),
-                child: Text(
-                  'Hot Site',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w100,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 400),
+                    slidingBeginOffset: Offset(0.0, -0.35),
+                    child: Text(
+                      'Front-end',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
+                  SizedBox(height: 16),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 600),
+                    child: Text(
+                      'Flutter',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 700),
+                    child: Text(
+                      'VueJS',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 800),
+                    child: Text(
+                      'React',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 900),
+                    child: Text(
+                      'Angular',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 900),
+                    child: Text(
+                      'HTML5',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 900),
+                    child: Text(
+                      'Javascript',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 900),
+                    child: Text(
+                      'CSS3',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 400),
+                    slidingBeginOffset: Offset(0.0, -0.35),
+                    child: Text(
+                      'Back-end',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 600),
+                    child: Text(
+                      'NodeJS',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 700),
+                    child: Text(
+                      'Dart',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 800),
+                    child: Text(
+                      'Java',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 800),
-                child: Text(
-                  '1 a 2 semanas',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[900],
-                    fontFamily: 'Public_Sans',
-                    fontWeight: FontWeight.w100,
+              SizedBox(width: 32),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 400),
+                    slidingBeginOffset: Offset(0.0, -0.35),
+                    child: Text(
+                      'Banco de dados',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 400),
-                slidingBeginOffset: Offset(0.0, -0.35),
-                child: Text(
-                  'Ecommerce',
-                  style: TextStyle(
-                    fontSize: 20,
-                    // color: Colors.white,
-                    fontWeight: FontWeight.w100,
+                  SizedBox(height: 16),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 600),
+                    child: Text(
+                      'GraphQL',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 800),
-                child: Text(
-                  '1 a 2 meses',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[900],
-                    fontFamily: 'Public_Sans',
-                    fontWeight: FontWeight.w100,
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 700),
+                    child: Text(
+                      'MySQL',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 400),
-                slidingBeginOffset: Offset(0.0, -0.35),
-                child: Text(
-                  'Leading Pages',
-                  style: TextStyle(
-                    fontSize: 20,
-                    // color: Colors.white,
-                    fontWeight: FontWeight.w100,
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 800),
+                    child: Text(
+                      'PostgreSQL',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 800),
-                child: Text(
-                  '3 a 7 dias',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[900],
-                    fontFamily: 'Public_Sans',
-                    fontWeight: FontWeight.w100,
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 800),
+                    child: Text(
+                      'MongoDB',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 400),
-                slidingBeginOffset: Offset(0.0, -0.35),
-                child: Text(
-                  'Consultoria',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w100,
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 800),
+                    child: Text(
+                      'Firebase',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 800),
-                child: Text(
-                  '1 a 2 semanas',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[900],
-                    fontFamily: 'Public_Sans',
-                    fontWeight: FontWeight.w100,
+                  SizedBox(height: 64),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 400),
+                    slidingBeginOffset: Offset(0.0, -0.35),
+                    child: Text(
+                      'APIs',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
                   ),
-                ),
+                  SizedBox(height: 16),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 800),
+                    child: Text(
+                      'No geral',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

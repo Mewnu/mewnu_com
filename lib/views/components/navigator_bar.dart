@@ -47,23 +47,6 @@ class NavigatorBar extends StatelessWidget {
                       onHover: (value) {},
                       child: Stack(
                         children: [
-                          // AnimatedContainer(
-                          //   duration: Duration(milliseconds: 1200),
-                          //   height: navigatorController.index == 0 ? 32 : 0,
-                          //   // decoration: BoxDecoration(
-                          //   //   image: DecorationImage(
-                          //   //     image: AssetImage(
-                          //   //       'assets/logo/mewnu_logo_light.png',
-                          //   //     ),
-                          //   //   ),
-                          //   // ),
-                          //   child: Image.asset(
-                          //     'assets/logo/mewnu_logo_light.png',
-                          //     color: navigatorController.index == 0
-                          //         ? Colors.red
-                          //         : Colors.transparent,
-                          //   ),
-                          // ),
                           navigatorController.index == 0
                               ? DelayedDisplay(
                                   delay: Duration(milliseconds: 200),
@@ -81,21 +64,6 @@ class NavigatorBar extends StatelessWidget {
                                   ),
                                 )
                               : Container(),
-                          // AnimatedContainer(
-                          //   duration: Duration(milliseconds: 1200),
-                          //   height: navigatorController.index == 1 ? 32 : 0,
-                          //   // decoration: BoxDecoration(
-                          //   //   image: DecorationImage(
-                          //   //     image: AssetImage(
-                          //   //       'assets/logo/mewnu_logo_dark.png',
-                          //   //     ),
-                          //   //   ),
-                          //   // ),
-                          //   child: Image.asset(
-                          //     'assets/logo/mewnu_logo_light.png',
-                          //     color: navigatorController.index == 1 ? Colors.red : Colors.transparent,
-                          //   ),
-                          // ),
                         ],
                       ),
                     );
@@ -106,14 +74,6 @@ class NavigatorBar extends StatelessWidget {
               Row(
                 children: [
                   InkWell(
-                    // focusColor: Colors.transparent,
-                    // hoverColor: Colors.transparent,
-                    // splashColor: Colors.transparent,
-                    // // this.focusColor,
-                    // // this.hoverColor,
-                    // highlightColor: Colors.transparent,
-                    // // overlayColor: Colors.transparent,
-                    // // this.splashColor,
                     onTap: () {
                       onTap(0);
                     },
@@ -140,7 +100,7 @@ class NavigatorBar extends StatelessWidget {
                     },
                     onHover: (value) {},
                     child: Text(
-                      'CONTACT',
+                      'CONTATO',
                       style: TextStyle(
                         fontFamily: 'Lato',
                         wordSpacing: 4,
