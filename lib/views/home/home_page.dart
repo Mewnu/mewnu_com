@@ -9,38 +9,39 @@ import 'package:mewnu/views/home/home_page.dart';
 import 'package:mewnu/views/components/navigator_bar.dart';
 
 import 'package:mewnu/views/components/navigator_controller.dart';
-import 'package:mewnu/views/home/home_page_1.dart';
+import 'package:mewnu/views/home/home_page_1/home_page_1.dart';
 import 'package:mewnu/views/home/home_page_2/home_page_2.dart';
 import 'package:mewnu/views/home/home_page_3/home_page_3.dart';
 import 'package:mewnu/views/home/home_page_4/home_page_4.dart';
 import 'package:rx_notifier/rx_notifier.dart';
 
-class HomePage extends StatelessWidget {
-//   @override
-//   _HomePageState createState() => _HomePageState();
-// }
+// class HomePage extends StatelessWidget {
+//   HomePage({this.navigatorController});
+//   final NavigatorController navigatorController;
+class HomePage extends StatefulWidget {
+  HomePage({this.navigatorController});
+  final NavigatorController navigatorController;
+  @override
+  _HomePageState createState() => _HomePageState();
+}
 
-// class _HomePageState extends State<HomePage> {
-  SwiperController swiperController = SwiperController();
-  List<Widget> navigationPages = [
-    HomePage1(),
-    HomePage2(),
-    HomePage3(),
-    HomePage4(),
-  ];
+class _HomePageState extends State<HomePage> {
+
+  final SwiperController swiperController = SwiperController();
   @override
   Widget build(BuildContext context) {
-    // double padding = MediaQuery.of(context).size.width / 6;
-    // double titleSize = MediaQuery.of(context).size.width / 16.6;
+    final List<Widget> navigationPages = [
+      HomePage1(navigatorController: widget.navigatorController),
+      HomePage2(),
+      HomePage3(),
+      HomePage4(),
+    ];
+    
     return Swiper(
       controller: swiperController,
       itemCount: navigationPages.length,
       scrollDirection: Axis.vertical,
       loop: false,
-      // onIndexChanged: (index) {
-      //   print(constraints.maxWidth);
-      //   navigatorController.setCurrentSwiperIndex(index);
-      // },
       itemBuilder: (BuildContext context, int index) {
         return navigationPages[index];
       },

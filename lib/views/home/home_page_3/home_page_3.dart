@@ -25,8 +25,8 @@ class _HomePage3State extends State<HomePage3> {
     double width = MediaQuery.of(context).size.width;
     double padding = width / 6;
     double titleSize = width / 13.15;
-    double titleSize3 = width / 31.5;
     double titleSize4 = width / 16.5;
+    double heightBox = width / 32;
     return LayoutBuilder(
       builder: (context, constraints) {
         return Stack(
@@ -35,154 +35,71 @@ class _HomePage3State extends State<HomePage3> {
               padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
               color: Colors.grey[100],
               child: Container(
-                // color: Colors.red,
+                // color: Colors.blue,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: padding / 4),
-                    Row(
-                      children: [
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 600),
-                          slidingBeginOffset: Offset(0.0, -0.35),
-                          child: Text(
-                            'Damos ',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Row(
+                          children: [
+                            DelayedDisplay(
+                              delay: Duration(
+                                  milliseconds: 200), //milliseconds: 600),
+                              slidingBeginOffset: Offset(0.0, -0.35),
+                              child: Text(
+                                'Damos ',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 800),
-                          child: Text(
-                            'vida ',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                            DelayedDisplay(
+                              delay: Duration(
+                                  milliseconds: 600), //milliseconds: 800),
+                              child: Text(
+                                'vida ao seu',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 1000),
-                          child: Text(
-                            'ao ',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 1200),
-                          child: Text(
-                            'seu',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                     DelayedDisplay(
-                      delay: Duration(milliseconds: 0), //milliseconds: 200),
+                      delay: Duration(milliseconds: 800), //milliseconds: 200),
                       child: Text(
                         'projeto.',
                         style: TextStyle(
                           fontSize: titleSize,
-                          // color: Colors.white,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
-                    SizedBox(height: padding / 8),
-                    Row(
-                      children: [
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2400),
+                    SizedBox(height: heightBox),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: DelayedDisplay(
+                          delay: Duration(
+                              milliseconds: 1000), //milliseconds: 2400),
                           child: Text(
-                            'Focamos ',
+                            'Focamos na perfeição sem perder os prazos.',
                             style: TextStyle(
-                              fontSize: titleSize3,
-                              // color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2600),
-                          child: Text(
-                            'na perfeição ',
-                            style: TextStyle(
-                              fontSize: titleSize3,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2800),
-                          child: Text(
-                            'sem ',
-                            style: TextStyle(
-                              fontSize: titleSize3,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 3000),
-                          child: Text(
-                            'perder ',
-                            style: TextStyle(
-                              fontSize: titleSize3,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 3200),
-                          child: Text(
-                            'os ',
-                            style: TextStyle(
-                              fontSize: titleSize3,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 3400),
-                          child: Text(
-                            'prazos.',
-                            style: TextStyle(
-                              fontSize: titleSize3,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                    SizedBox(height: padding / 8),
+                    SizedBox(height: heightBox),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -233,8 +150,8 @@ class _HomePage3State extends State<HomePage3> {
                                 ),
                                 AnimatedContainer(
                                   duration: Duration(milliseconds: 200),
-                                  height: _isHover || _showDeadlines ? 24 : 0,
-                                  width: titleSize4 * 3.7,
+                                  height: 4,
+                                  width: titleSize4 * 3.1,
                                   decoration: BoxDecoration(
                                     border: Border(
                                       top: BorderSide(

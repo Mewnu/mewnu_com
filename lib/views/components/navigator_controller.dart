@@ -15,4 +15,12 @@ class NavigatorController {
   setCurrentSwiperIndex(int val) {
     index = val;
   }
+
+  final _futuristic = RxNotifier<bool>(false);
+  bool get futuristic => _futuristic.value;
+  set futuristic(bool val) => _futuristic.value = val;
+
+  setFuturistic() {
+    futuristic = !futuristic;
+  }
 }

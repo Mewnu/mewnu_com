@@ -24,8 +24,8 @@ class _HomePage4State extends State<HomePage4> {
     double width = MediaQuery.of(context).size.width;
     double padding = width / 6;
     double titleSize = width / 16.1;
-    double titleSize2 = width / 17.17;
     double titleSize3 = width / 38.47;
+    double heightBox = width / 50;
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -37,148 +37,78 @@ class _HomePage4State extends State<HomePage4> {
               width: width,
               color: Colors.white,
               child: Container(
-                // color: Colors.red,
+                // color: Colors.blue,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: padding / 4),
-                    Row(
-                      children: [
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 600),
-                          slidingBeginOffset: Offset(0.0, -0.35),
-                          child: Text(
-                            'Serviço ',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Row(
+                          children: [
+                            DelayedDisplay(
+                              delay: Duration(milliseconds: 200),
+                              slidingBeginOffset: Offset(0.0, -0.35),
+                              child: Text(
+                                'Serviço ',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 800),
-                          child: Text(
-                            'de ',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                            DelayedDisplay(
+                              delay: Duration(milliseconds: 600),
+                              child: Text(
+                                'de fácil acesso',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 1000),
-                          child: Text(
-                            'fácil ',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 1200),
-                          child: Text(
-                            'acesso',
-                            style: TextStyle(
-                              fontSize: titleSize,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 200),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: DelayedDisplay(
+                          delay: Duration(milliseconds: 800),
                           child: Text(
-                            'e ',
+                            'e que cabe no seu bolso.',
                             style: TextStyle(
-                              fontSize: titleSize2,
-                              // color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2400),
-                          child: Text(
-                            'que ',
-                            style: TextStyle(
-                              fontSize: titleSize2,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2600),
-                          child: Text(
-                            'cabe ',
-                            style: TextStyle(
-                              fontSize: titleSize2,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2800),
-                          child: Text(
-                            'no ',
-                            style: TextStyle(
-                              fontSize: titleSize2,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 3000),
-                          child: Text(
-                            'seu ',
-                            style: TextStyle(
-                              fontSize: titleSize2,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 3200),
-                          child: Text(
-                            'bolso.',
-                            style: TextStyle(
-                              fontSize: titleSize2,
-                              // color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                    SizedBox(height: padding / 8),
+                    SizedBox(height: heightBox),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: DelayedDisplay(
+                          delay: Duration(milliseconds: 1000),
+                          child: Text(
+                            'Entregar valor é o nosso propósito.',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: heightBox),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         DelayedDisplay(
-                          delay:
-                              Duration(milliseconds: 0), //milliseconds: 2400),
+                          delay: Duration(milliseconds: 0),
                           child: InkWell(
                             onTap: () {
                               setState(() {
@@ -223,8 +153,8 @@ class _HomePage4State extends State<HomePage4> {
                                 ),
                                 AnimatedContainer(
                                   duration: Duration(milliseconds: 200),
-                                  height: _isHover || _showDeadlines ? 24 : 0,
-                                  width: titleSize * 3.8,
+                                  height: 4,
+                                  width: titleSize * 3.2,
                                   decoration: BoxDecoration(
                                     border: Border(
                                       top: BorderSide(

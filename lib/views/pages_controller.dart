@@ -5,6 +5,7 @@ import 'package:mewnu/views/contact/contact_page.dart';
 import 'package:mewnu/views/home/home_page.dart';
 import 'package:mewnu/views/components/navigator_bar.dart';
 import 'package:mewnu/views/components/navigator_controller.dart';
+import 'package:rx_notifier/rx_notifier.dart';
 
 class PagesController extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class PagesController extends StatefulWidget {
 }
 
 class _PagesControllerState extends State<PagesController> {
-  final navigatorController = NavigatorController();
+  NavigatorController navigatorController = NavigatorController();
   SwiperController swiperController = SwiperController();
   bool isHovered = false;
   int onIndexChanged = 1;
@@ -36,29 +37,53 @@ class _PagesControllerState extends State<PagesController> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> navigationPages = [HomePage(),ContactPage()];//[ContactPage(), Container()];HomePage(), 
-    return Scaffold(
-      body: Stack(
-        children: [
-          Swiper(
-            controller: swiperController,
-            itemCount: navigationPages.length,
-            scrollDirection: Axis.horizontal,
-            loop: false,
-            onIndexChanged: (index) {
-              navigatorController.setCurrentSwiperIndex(index);
-            },
-            itemBuilder: (BuildContext context, int index) {
-              return navigationPages[index];
-            },
+    List<Widget> navigationPages = [
+      HomePage(navigatorController: navigatorController),
+      ContactPage()
+    ];
+    // List<Widget> navigationFuturisticPages = [
+    //   HomeFuturisticPage(navigatorController: navigatorController),
+    //   ContactFuturisticPage()
+    // ];
+    return RxBuilder(
+      builder: (BuildContext context) {
+        return Scaffold(
+          body: Stack(
+            children: [
+              navigatorController.futuristic 
+                  ? Swiper(
+                      controller: swiperController,
+                      itemCount: navigationPages.length,
+                      scrollDirection: Axis.horizontal,
+                      loop: false,
+                      onIndexChanged: (index) {
+                        navigatorController.setCurrentSwiperIndex(index);
+                      },
+                      itemBuilder: (BuildContext context, int index) {
+                        return navigationPages[index];
+                      },
+                    )
+                  : Swiper(
+                      controller: swiperController,
+                      itemCount: navigationPages.length,
+                      scrollDirection: Axis.horizontal,
+                      loop: false,
+                      onIndexChanged: (index) {
+                        navigatorController.setCurrentSwiperIndex(index);
+                      },
+                      itemBuilder: (BuildContext context, int index) {
+                        return navigationPages[index];
+                      },
+                    ),
+              NavigatorBar(
+                onTap: (i) => onTap(i),
+                onIndexChanged: onIndexChanged,
+                navigatorController: navigatorController,
+              ),
+            ],
           ),
-          NavigatorBar(
-            onTap: (i) => onTap(i),
-            onIndexChanged: onIndexChanged,
-            navigatorController: navigatorController,
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
