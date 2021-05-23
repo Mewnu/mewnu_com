@@ -1,12 +1,12 @@
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 
-class HomePage1 extends StatefulWidget {
+class ContactZone1 extends StatefulWidget {
   @override
-  _HomePage1State createState() => _HomePage1State();
+  _ContactZone1State createState() => _ContactZone1State();
 }
 
-class _HomePage1State extends State<HomePage1> {
+class _ContactZone1State extends State<ContactZone1> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

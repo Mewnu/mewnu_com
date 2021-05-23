@@ -73,6 +73,10 @@ flutter:
     - assets/logo/
     - assets/icon/
     - assets/google/maps_style.txt
+    - assets/images/png/
+    - assets/icons/png/
+    - assets/icons/svg/
+    - assets/logos/
 
   fonts:
     - family: Red_Hat_Display
@@ -112,7 +116,22 @@ flutter:
     - family: Public_Sans
       fonts:
         - asset: assets/fonts/Public_Sans/PublicSans-VariableFont_wght.ttf
-
+    - family: ZenDots
+      fonts:
+        - asset: assets/fonts/ZenDots-Regular.ttf
+    - family: PS5
+      fonts:
+        - asset: assets/fonts/PS5.ttf
+    - family: Nunito_sans
+      fonts:
+        - asset: assets/fonts/Nunito_sans/NunitoSans-Regular.ttf
+    - family: Quicksand
+      fonts:
+        - asset: assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf
+    - family: Arimo
+      fonts:
+        - asset: assets/fonts/Arimo/Arimo-VariableFont_wght.ttf
+        
 flutter_icons:
   android: "launcher_icon"
   ios: true

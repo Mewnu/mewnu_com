@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Mewnu',
       theme: ThemeData(
         brightness: Brightness.light,
-        fontFamily: 'Red_Hat_Display',
+        fontFamily: 'Horizon',//'Red_Hat_Display',
         hintColor: Colors.transparent,
         focusColor: Colors.transparent,
         hoverColor: Colors.transparent,

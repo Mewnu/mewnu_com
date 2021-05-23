@@ -859,67 +859,11 @@
 //     super.didChangeDependencies();
 //   }
 
-// //   void _updateValues() {
-// //     if (widget.scrollDirection == Axis.horizontal) {
-// //       final double space = (_swiperWidth! - widget.itemWidth!) / 2;
-// //       offsets = [
-// //         _swiperWidth,
-// // // -800,
-// //         0.0,
-// //         // 200,
-// //         // 400,
-// //         // 600,
-// //         // -space / 3,
-// //         // -space / 3 * 2,
-// //         // -space,
-// //             -space * 3 / 2,
-// //         -space * 3,
-// //         -space,
-// //       ];
-// //     } else {
-// //       final double space = (_swiperHeight! - widget.itemHeight!) / 2;
-// //       offsets = [
-// //         _swiperHeight,
-// //         // -800,
-// //         0.0,
-// //         //  200,
-// //         // 400,
-// //         // 600,
-// //         -space * 3 / 2,
-// //         -space * 3,
-// //         -space,
-// //       ];
-// //     }
-// //   }
-
-// //   @override
-// //   void didUpdateWidget(_StackSwiper oldWidget) {
-// //     _updateValues();
-// //     super.didUpdateWidget(oldWidget);
-// //   }
-
-// //   @override
-// //   void afterRender() {
-// //     super.afterRender();
-
-// //     //length of the values array below
-// //     _animationCount = 5;
-
-// //     //Array below this line, '0' index is 1.0 ,witch is the first item show in swiper.
-// //     _startIndex = -3;
-// //     // scales = [2.0, 1.0, 0.8, 0.6, 0.4];
-// //     // opacity = [0.0, 1.0, 0.4, 0.3, 0.2];
-// //     scales = [0.4, 0.6, 0.8, 1.0, 2.0];
-// //     opacity = [0.1, 0.2, 0.3, 1.0, 0.0];
-
-// //     _updateValues();
-// //   }
-
 //   void _updateValues() {
 //     if (widget.scrollDirection == Axis.horizontal) {
-//       offsets = [0.0, 0.0, _swiperWidth];
+//       offsets = [-200.0, 0.0, _swiperWidth * 0.8];
 //     } else {
-//       offsets = [0.0, 0.0, _swiperHeight];
+//       offsets = [-200.0, 0.0, _swiperHeight * 0.8];
 //     }
 //   }
 
@@ -938,8 +882,8 @@
 
 //     //Array below this line, '0' index is 1.0 ,witch is the first item show in swiper.
 //     _startIndex = -1;
-//     scales = [1, 1, 1];
-//     opacity = [1.0, 1.0, 1.0];
+//     scales = [0.4, 0.8, 2];
+//     opacity = [0.0, 1, 0.2];
 
 //     _updateValues();
 //   }
