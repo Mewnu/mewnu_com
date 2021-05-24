@@ -1,12 +1,15 @@
-import 'dart:async';
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:mewnu/views/components/navigator_controller.dart';
+import "package:flutter_neumorphic/flutter_neumorphic.dart";
 
 class HomeZone1 extends StatefulWidget {
-  HomeZone1({this.navigatorController});
+  HomeZone1({
+    this.navigatorController,
+    this.onTap(i),
+  });
   final NavigatorController navigatorController;
+  final void Function(int) onTap;
   @override
   _HomeZone1State createState() => _HomeZone1State();
 }
@@ -25,14 +28,15 @@ class _HomeZone1State extends State<HomeZone1> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double padding = width / 6;
-    double titleSize2 = width / 16.30;
-    double heightBox = width / 50;
+    double titleSize2 = width / 15.80;
+    double heightBox = width / 160;
+    double heightBox2 = width / 50;
     double titleSize = width / 16.18;
     double titleSize3 = width / 38.47;
-    return Padding(
+    return Container(
       padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
+        color: Colors.white,
       child: Container(
-        // color: Colors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -83,39 +87,37 @@ class _HomeZone1State extends State<HomeZone1> {
                 ),
               ),
             ),
-            Row(
-              children: [
-                DelayedDisplay(
-                  delay: Duration(milliseconds: 600),
-                  child: Text(
-                    'webdesign ',
-                    style: TextStyle(
-                      fontSize: titleSize2,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-                DelayedDisplay(
-                  delay: Duration(milliseconds: 400),
-                  slidingBeginOffset: Offset(0.35, 0),
-                  child: DefaultTextStyle(
-                    style: TextStyle(
-                      fontSize: titleSize2,
-                      fontWeight: FontWeight.w600,
-                      // fontFamily: 'Horizon',
-                    ),
-                    child: AnimatedTextKit(
-                      repeatForever: true,
-                      animatedTexts: [
-                        FadeAnimatedText('minimalista.'),
-                        FadeAnimatedText('futurista.'),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
             SizedBox(height: heightBox),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Row(
+                  children: [
+                    DelayedDisplay(
+                      delay: Duration(milliseconds: 600),
+                      child: Text(
+                        'desenvolvimento ',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    DelayedDisplay(
+                      delay: Duration(milliseconds: 400),
+                      slidingBeginOffset: Offset(0.35, 0),
+                      child: Text(
+                        'minimalista',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: heightBox2),
             Container(
               width: MediaQuery.of(context).size.width,
               child: FittedBox(
@@ -131,7 +133,7 @@ class _HomeZone1State extends State<HomeZone1> {
                 ),
               ),
             ),
-            SizedBox(height: heightBox),
+            SizedBox(height: heightBox2),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -139,9 +141,7 @@ class _HomeZone1State extends State<HomeZone1> {
                   delay: Duration(milliseconds: 0),
                   child: InkWell(
                     onTap: () {
-                      setState(() {
-                        widget.navigatorController.setFuturistic();
-                      });
+                      widget.onTap(1);
                     },
                     onHover: (value) {
                       setState(() {
@@ -157,7 +157,7 @@ class _HomeZone1State extends State<HomeZone1> {
                             children: [
                               Container(
                                 child: Text(
-                                  'modo futurista ',
+                                  'ver mais ', // 'modo futurista ',
                                   style: TextStyle(
                                     fontFamily: 'Red_Hat_Text',
                                     fontSize: titleSize3,
@@ -168,10 +168,10 @@ class _HomeZone1State extends State<HomeZone1> {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(
-                                  top: titleSize / 10,
+                                  top: titleSize / 20,
                                 ),
                                 child: Icon(
-                                  Icons.call_made,
+                                  Icons.arrow_downward,
                                   size: titleSize / 2.6,
                                   color: Colors.grey[400],
                                 ),
@@ -182,7 +182,7 @@ class _HomeZone1State extends State<HomeZone1> {
                         AnimatedContainer(
                           duration: Duration(milliseconds: 200),
                           height: 4,
-                          width: titleSize * 2.84,
+                          width: titleSize * 1.64,
                           decoration: BoxDecoration(
                             border: Border(
                               top: BorderSide(

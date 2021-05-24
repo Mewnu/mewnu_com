@@ -28,31 +28,7 @@ class _ProductCardState extends State<ProductCard> {
   bool isHover = false;
   bool isHoverPrevious = false;
   bool isHoverNext = false;
-  // List<Image> images = [];
   ProductModel product;
-  // Image imagebg;
-  // Image imagebg2;
-  // Image image;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   for (product in widget.productsList) {
-  //     images.add(Image.asset(product.image));
-  //     images.add(Image.asset(product.imageBlur));
-  //     images.add(Image.asset(product.imageBlur2));
-  //   }
-  //   images.add(Image.asset('assets/images/bg.png'));
-  //   images.add(Image.asset('assets/images/bg_2.png'));
-  // }
-
-  // @override
-  // void didChangeDependencies() {
-  //   super.didChangeDependencies();
-  //   for (image in images) {
-  //     precacheImage(image.image, context);
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -94,15 +70,9 @@ class _ProductCardState extends State<ProductCard> {
             height: 300,
             width: 300,
             child: Text('oi', style: TextStyle(color: Colors.black),
+            ),
           ),
-          // child: Container(color: Colors.red),
-          // Hero(
-          //   tag: widget.productsList[widget.index].id,
-          //   child: Image.asset(
-          //     widget.productsList[widget.index].image,
-          //   ),
-          // ),
-        ),),
+        ),
         AnimatedContainer(
           duration: Duration(milliseconds: 0),
           height: MediaQuery.of(context).size.height,

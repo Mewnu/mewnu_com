@@ -23,15 +23,14 @@ class _HomeZone2State extends State<HomeZone2> {
     double width = MediaQuery.of(context).size.width;
     double padding = width / 6;
     double textSizeRow3 = width / 16.5;
-    double heightBox = width / 56;
+    double heightBox = width / 112;
 
     return LayoutBuilder(
       builder: (context, constraints) {
         return Stack(
           children: [
-            Container(
+            Padding(
               padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
-              color: Colors.grey[100],
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +55,7 @@ class _HomeZone2State extends State<HomeZone2> {
                           DelayedDisplay(
                             delay: Duration(milliseconds: 600),
                             child: Text(
-                              'as mesmas',
+                              'as mesmas tecnologias',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                               ),
@@ -66,16 +65,34 @@ class _HomeZone2State extends State<HomeZone2> {
                       ),
                     ),
                   ),
+                  SizedBox(height: heightBox),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: FittedBox(
                       fit: BoxFit.fitWidth,
                       child: DelayedDisplay(
                         delay: Duration(milliseconds: 400),
-                        child: Text(
-                          'tecnologias que as multinacionais.',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w600,
+                        child: RichText(
+                          text: TextSpan(
+                            text: 'que a ',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: 'nubank',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.purple,
+                                ),
+                              ),
+                              TextSpan(
+                                text: ' e outras multinacionais.',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -89,7 +106,7 @@ class _HomeZone2State extends State<HomeZone2> {
                       child: DelayedDisplay(
                         delay: Duration(milliseconds: 800),
                         child: Text(
-                          'As melhores tecnologias do mundo.',
+                          'As melhores do mundo.',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                           ),
@@ -102,8 +119,7 @@ class _HomeZone2State extends State<HomeZone2> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       DelayedDisplay(
-                        delay:
-                            Duration(milliseconds: 0), //milliseconds: 2400),
+                        delay: Duration(milliseconds: 0),
                         child: InkWell(
                           onTap: () {
                             setState(() {
@@ -154,8 +170,7 @@ class _HomeZone2State extends State<HomeZone2> {
                                   border: Border(
                                     top: BorderSide(
                                       color: Colors.grey[200],
-                                      width:
-                                          _isHover || _showDeadlines ? 4 : 0,
+                                      width: _isHover || _showDeadlines ? 4 : 0,
                                     ),
                                   ),
                                 ),

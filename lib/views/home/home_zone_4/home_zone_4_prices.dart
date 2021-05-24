@@ -27,7 +27,7 @@ class _HomeZone4PricesState extends State<HomeZone4Prices> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               DelayedDisplay(
-                delay: Duration(milliseconds: 0), //milliseconds: 2400),
+                delay: Duration(milliseconds: 0),
                 child: InkWell(
                   onTap: () {
                     widget.onBack();
@@ -146,14 +146,47 @@ class _HomeZone4PricesState extends State<HomeZone4Prices> {
               ),
             ],
           ),
+          // SizedBox(height: 16),
+          // Row(
+          //   children: [
+          //     DelayedDisplay(
+          //       delay: Duration(milliseconds: 400),
+          //       slidingBeginOffset: Offset(0.0, -0.35),
+          //       child: Text(
+          //         'Leading Pages',
+          //         style: TextStyle(
+          //           fontSize: 20,
+          //           fontWeight: FontWeight.w100,
+          //         ),
+          //       ),
+          //     ),
+          //   ],
+          // ),
+          // SizedBox(height: 16),
+          // Row(
+          //   children: [
+          //     DelayedDisplay(
+          //       delay: Duration(milliseconds: 800),
+          //       child: Text(
+          //         'apartir de 12x R\$84,00',
+          //         style: TextStyle(
+          //           fontSize: 20,
+          //           color: Colors.grey[900],
+          //           fontFamily: 'Public_Sans',
+          //           fontWeight: FontWeight.w100,
+          //         ),
+          //       ),
+          //     ),
+          //   ],
+          // ),
           SizedBox(height: 16),
-          Row(
+           Row(
             children: [
               DelayedDisplay(
                 delay: Duration(milliseconds: 400),
                 slidingBeginOffset: Offset(0.0, -0.35),
                 child: Text(
-                  'Leading Pages',
+                  'App Mobile',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w100,
@@ -168,7 +201,7 @@ class _HomeZone4PricesState extends State<HomeZone4Prices> {
               DelayedDisplay(
                 delay: Duration(milliseconds: 800),
                 child: Text(
-                  'apartir de 12x R\$84,00',
+                  'apartir de 12x R\$250,00',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.grey[900],

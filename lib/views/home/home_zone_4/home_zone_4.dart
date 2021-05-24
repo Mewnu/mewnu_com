@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:mewnu/views/home/home_zone_4/home_zone_4_prices.dart';
@@ -25,20 +24,15 @@ class _HomeZone4State extends State<HomeZone4> {
     double padding = width / 6;
     double titleSize = width / 16.1;
     double titleSize3 = width / 38.47;
-    double heightBox = width / 50;
+    double heightBox = width / 56;
 
     return LayoutBuilder(
       builder: (context, constraints) {
         return Stack(
           children: [
-            Container(
+            Padding(
               padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
-              height: MediaQuery.of(context).size.height,
-              width: width,
-              color: Colors.white,
-              child: Container(
-                // color: Colors.blue,
-                child: Column(
+              child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -129,7 +123,7 @@ class _HomeZone4State extends State<HomeZone4> {
                                     children: [
                                       Container(
                                         child: Text(
-                                          'consultar valores   ',
+                                          'consultar valores ',
                                           style: TextStyle(
                                             fontFamily: 'Red_Hat_Text',
                                             fontSize: titleSize3,
@@ -172,7 +166,6 @@ class _HomeZone4State extends State<HomeZone4> {
                       ],
                     ),
                   ],
-                ),
               ),
             ),
             Align(

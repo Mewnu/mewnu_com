@@ -27,7 +27,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               DelayedDisplay(
-                delay: Duration(milliseconds: 0), //milliseconds: 2400),
+                delay: Duration(milliseconds: 400), //milliseconds: 2400),
                 child: InkWell(
                   onTap: () {
                     widget.onBack();
@@ -87,7 +87,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 400),
+                    delay: Duration(milliseconds: 100),
                     slidingBeginOffset: Offset(0.0, -0.35),
                     child: Text(
                       'Front-end',
@@ -99,7 +99,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                   ),
                   SizedBox(height: 16),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 600),
+                    delay: Duration(milliseconds: 200),
                     child: Text(
                       'Flutter',
                       style: TextStyle(
@@ -111,9 +111,9 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 700),
+                    delay: Duration(milliseconds: 200),
                     child: Text(
-                      'VueJS',
+                      'Vue',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.grey[900],
@@ -123,19 +123,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 800),
-                    child: Text(
-                      'React',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.grey[900],
-                        fontFamily: 'Public_Sans',
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
-                  ),
-                  DelayedDisplay(
-                    delay: Duration(milliseconds: 900),
+                    delay: Duration(milliseconds: 200),
                     child: Text(
                       'Angular',
                       style: TextStyle(
@@ -147,9 +135,9 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 900),
+                    delay: Duration(milliseconds: 600),
                     child: Text(
-                      'HTML5',
+                      '...',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.grey[900],
@@ -158,33 +146,9 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 40),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 900),
-                    child: Text(
-                      'Javascript',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.grey[900],
-                        fontFamily: 'Public_Sans',
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
-                  ),
-                  DelayedDisplay(
-                    delay: Duration(milliseconds: 900),
-                    child: Text(
-                      'CSS3',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.grey[900],
-                        fontFamily: 'Public_Sans',
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  DelayedDisplay(
-                    delay: Duration(milliseconds: 400),
+                    delay: Duration(milliseconds: 300),
                     slidingBeginOffset: Offset(0.0, -0.35),
                     child: Text(
                       'Back-end',
@@ -196,9 +160,9 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                   ),
                   SizedBox(height: 16),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 600),
+                    delay: Duration(milliseconds: 400),
                     child: Text(
-                      'NodeJS',
+                      'Node',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.grey[900],
@@ -208,7 +172,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 700),
+                    delay: Duration(milliseconds: 500),
                     child: Text(
                       'Dart',
                       style: TextStyle(
@@ -220,9 +184,21 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 800),
+                    delay: Duration(milliseconds: 500),
                     child: Text(
-                      'Java',
+                      'GraphQL',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                   DelayedDisplay(
+                    delay: Duration(milliseconds: 600),
+                    child: Text(
+                      '...',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.grey[900],
@@ -238,7 +214,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 400),
+                    delay: Duration(milliseconds: 100),
                     slidingBeginOffset: Offset(0.0, -0.35),
                     child: Text(
                       'Banco de dados',
@@ -250,31 +226,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                   ),
                   SizedBox(height: 16),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 600),
-                    child: Text(
-                      'GraphQL',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.grey[900],
-                        fontFamily: 'Public_Sans',
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
-                  ),
-                  DelayedDisplay(
-                    delay: Duration(milliseconds: 700),
-                    child: Text(
-                      'MySQL',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.grey[900],
-                        fontFamily: 'Public_Sans',
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
-                  ),
-                  DelayedDisplay(
-                    delay: Duration(milliseconds: 800),
+                    delay: Duration(milliseconds: 300),
                     child: Text(
                       'PostgreSQL',
                       style: TextStyle(
@@ -286,7 +238,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 800),
+                    delay: Duration(milliseconds: 600),
                     child: Text(
                       'MongoDB',
                       style: TextStyle(
@@ -298,7 +250,7 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 800),
+                    delay: Duration(milliseconds: 700),
                     child: Text(
                       'Firebase',
                       style: TextStyle(
@@ -309,12 +261,24 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 64),
+                   DelayedDisplay(
+                    delay: Duration(milliseconds: 800),
+                    child: Text(
+                      '...',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
                   DelayedDisplay(
-                    delay: Duration(milliseconds: 400),
+                    delay: Duration(milliseconds: 100),
                     slidingBeginOffset: Offset(0.0, -0.35),
                     child: Text(
-                      'APIs',
+                      'Utilizando Flutter:',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w100,
@@ -322,10 +286,46 @@ class _HomeZone2TechsState extends State<HomeZone2Techs> {
                     ),
                   ),
                   SizedBox(height: 16),
-                  DelayedDisplay(
-                    delay: Duration(milliseconds: 800),
+                   DelayedDisplay(
+                    delay: Duration(milliseconds: 300),
                     child: Text(
-                      'No geral',
+                      'Nubank',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 300),
+                    child: Text(
+                      'Microsoft',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                  DelayedDisplay(
+                    delay: Duration(milliseconds: 600),
+                    child: Text(
+                      'Samsung',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                        fontFamily: 'Public_Sans',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                   DelayedDisplay(
+                    delay: Duration(milliseconds: 600),
+                    child: Text(
+                      '...',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.grey[900],

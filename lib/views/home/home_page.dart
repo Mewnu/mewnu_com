@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import "package:flutter_card_swipper/flutter_card_swiper.dart";
-import "package:flutter_neumorphic/flutter_neumorphic.dart";
-import 'package:mewnu/views/components/navigator_controller.dart';
 import 'package:mewnu/views/home/home_zone_1/home_zone_1.dart';
 import 'package:mewnu/views/home/home_zone_2/home_zone_2.dart';
 import 'package:mewnu/views/home/home_zone_3/home_zone_3.dart';
 import 'package:mewnu/views/home/home_zone_4/home_zone_4.dart';
+import 'package:mewnu/views/components/navigator_controller.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({this.navigatorController});
@@ -15,25 +13,35 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  PageController pageController = PageController(initialPage: 0);
 
-  final SwiperController swiperController = SwiperController();
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
+
+  onTap(int i) {
+    setState(() {
+      pageController.animateToPage(i,
+          duration: Duration(milliseconds: 1200), curve: Curves.decelerate);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final List<Widget> navigationPages = [
-      HomeZone1(navigatorController: widget.navigatorController),
-      HomeZone2(),
-      HomeZone3(),
-      HomeZone4(),
-    ];
-    
-    return Swiper(
-      controller: swiperController,
-      itemCount: navigationPages.length,
+    return PageView(
+      controller: pageController,
       scrollDirection: Axis.vertical,
-      loop: false,
-      itemBuilder: (BuildContext context, int index) {
-        return navigationPages[index];
-      },
+      children: [
+        HomeZone1(
+          navigatorController: widget.navigatorController,
+          onTap: (i) => onTap(i),
+        ),
+        HomeZone2(),
+        HomeZone3(),
+        HomeZone4(),
+      ],
     );
   }
 }

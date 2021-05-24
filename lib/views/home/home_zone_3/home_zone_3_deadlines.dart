@@ -27,7 +27,7 @@ class _HomeZone3DeadlinesState extends State<HomeZone3Deadlines> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               DelayedDisplay(
-                delay: Duration(milliseconds: 0), //milliseconds: 2400),
+                delay: Duration(milliseconds: 0),
                 child: InkWell(
                   onTap: () {
                     widget.onBack();
@@ -147,14 +147,14 @@ class _HomeZone3DeadlinesState extends State<HomeZone3Deadlines> {
               ),
             ],
           ),
-          SizedBox(height: 16),
+            SizedBox(height: 16),
           Row(
             children: [
               DelayedDisplay(
                 delay: Duration(milliseconds: 400),
                 slidingBeginOffset: Offset(0.0, -0.35),
                 child: Text(
-                  'Leading Pages',
+                  'App Mobile',
                   style: TextStyle(
                     fontSize: 20,
                     // color: Colors.white,
@@ -170,7 +170,7 @@ class _HomeZone3DeadlinesState extends State<HomeZone3Deadlines> {
               DelayedDisplay(
                 delay: Duration(milliseconds: 800),
                 child: Text(
-                  '3 a 7 dias',
+                  'A planejar',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.grey[900],
@@ -203,7 +203,7 @@ class _HomeZone3DeadlinesState extends State<HomeZone3Deadlines> {
               DelayedDisplay(
                 delay: Duration(milliseconds: 800),
                 child: Text(
-                  '1 a 2 semanas',
+                  '5 a 10 dias',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.grey[900],

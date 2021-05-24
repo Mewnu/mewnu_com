@@ -1,5 +1,5 @@
-import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
+import 'package:delayed_display/delayed_display.dart';
 
 class ContactZone2 extends StatefulWidget {
   @override
@@ -37,7 +37,7 @@ class _ContactZone2State extends State<ContactZone2> {
           DelayedDisplay(
             delay: Duration(milliseconds: 800),
             child: Text(
-              '+55(61)99342-4369',
+              '+55(61) 99342-4369',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.grey[300],
@@ -63,7 +63,7 @@ class _ContactZone2State extends State<ContactZone2> {
           DelayedDisplay(
             delay: Duration(milliseconds: 800),
             child: Text(
-              'support@mewnu.com',
+              'suporte@mewnu.com',
               style: TextStyle(
                 fontSize: 22,
                 color: Colors.grey[300],
@@ -77,7 +77,7 @@ class _ContactZone2State extends State<ContactZone2> {
             delay: Duration(milliseconds: 400),
             slidingBeginOffset: Offset(0.0, -0.35),
             child: Text(
-              'Endereço',
+              'Horário de funcionamento',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,
@@ -89,7 +89,7 @@ class _ContactZone2State extends State<ContactZone2> {
           DelayedDisplay(
             delay: Duration(milliseconds: 800),
             child: Text(
-              'SHIS QL 18 Conj. 7, 16, Bsb.',
+              '7:00 às 22:00',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.grey[300],
@@ -100,56 +100,16 @@ class _ContactZone2State extends State<ContactZone2> {
           ),
           SizedBox(height: 16),
           DelayedDisplay(
-            delay: Duration(milliseconds: 400),
-            slidingBeginOffset: Offset(0.0, -0.35),
+            delay: Duration(milliseconds: 800),
             child: Text(
-              'Mídias Sociais',
+              'Segunda à Sabado',
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.white,
+                color: Colors.grey[300],
+                fontFamily: 'Public_Sans',
                 fontWeight: FontWeight.w100,
               ),
             ),
-          ),
-          SizedBox(height: 16),
-          Row(
-            children: [
-              DelayedDisplay(
-                delay: Duration(milliseconds: 800),
-                child: Text(
-                  'FB',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[300],
-                    fontFamily: 'Public_Sans',
-                  ),
-                ),
-              ),
-              SizedBox(width: 20),
-              DelayedDisplay(
-                delay: Duration(milliseconds: 800),
-                child: Text(
-                  'IG',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[300],
-                    fontFamily: 'Public_Sans',
-                  ),
-                ),
-              ),
-              SizedBox(width: 20),
-              DelayedDisplay(
-                delay: Duration(milliseconds: 800),
-                child: Text(
-                  'LI',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey[300],
-                    fontFamily: 'Public_Sans',
-                  ),
-                ),
-              ),
-            ],
           ),
         ],
       ),

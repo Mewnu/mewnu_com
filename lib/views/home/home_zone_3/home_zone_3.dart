@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:mewnu/views/home/home_zone_3/home_zone_3_deadlines.dart';
@@ -26,17 +25,15 @@ class _HomeZone3State extends State<HomeZone3> {
     double padding = width / 6;
     double titleSize = width / 13.15;
     double titleSize4 = width / 16.5;
-    double heightBox = width / 32;
+    double heightBox = width / 40;
     return LayoutBuilder(
       builder: (context, constraints) {
         return Stack(
           children: [
             Container(
               padding: EdgeInsets.fromLTRB(padding, 0, padding, 0),
-              color: Colors.grey[100],
-              child: Container(
-                // color: Colors.blue,
-                child: Column(
+              color: Colors.white,
+              child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -49,7 +46,7 @@ class _HomeZone3State extends State<HomeZone3> {
                           children: [
                             DelayedDisplay(
                               delay: Duration(
-                                  milliseconds: 200), //milliseconds: 600),
+                                  milliseconds: 200),
                               slidingBeginOffset: Offset(0.0, -0.35),
                               child: Text(
                                 'Damos ',
@@ -60,7 +57,7 @@ class _HomeZone3State extends State<HomeZone3> {
                             ),
                             DelayedDisplay(
                               delay: Duration(
-                                  milliseconds: 600), //milliseconds: 800),
+                                  milliseconds: 600),
                               child: Text(
                                 'vida ao seu',
                                 style: TextStyle(
@@ -73,7 +70,7 @@ class _HomeZone3State extends State<HomeZone3> {
                       ),
                     ),
                     DelayedDisplay(
-                      delay: Duration(milliseconds: 800), //milliseconds: 200),
+                      delay: Duration(milliseconds: 800),
                       child: Text(
                         'projeto.',
                         style: TextStyle(
@@ -89,7 +86,7 @@ class _HomeZone3State extends State<HomeZone3> {
                         fit: BoxFit.fitWidth,
                         child: DelayedDisplay(
                           delay: Duration(
-                              milliseconds: 1000), //milliseconds: 2400),
+                              milliseconds: 1000),
                           child: Text(
                             'Focamos na perfeição sem perder os prazos.',
                             style: TextStyle(
@@ -105,7 +102,7 @@ class _HomeZone3State extends State<HomeZone3> {
                       children: [
                         DelayedDisplay(
                           delay:
-                              Duration(milliseconds: 0), //milliseconds: 2400),
+                              Duration(milliseconds: 0),
                           child: InkWell(
                             onTap: () {
                               setState(() {
@@ -126,7 +123,7 @@ class _HomeZone3State extends State<HomeZone3> {
                                     children: [
                                       Container(
                                         child: Text(
-                                          'consultar prazos   ',
+                                          'consultar prazos ',
                                           style: TextStyle(
                                             fontFamily: 'Red_Hat_Text',
                                             fontSize: titleSize4 / 2.39,
@@ -169,7 +166,6 @@ class _HomeZone3State extends State<HomeZone3> {
                       ],
                     ),
                   ],
-                ),
               ),
             ),
             Align(
