@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mewnu/views/home/home_zone_1/home_zone_1.dart';
-import 'package:mewnu/views/home/home_zone_2/home_zone_2.dart';
-import 'package:mewnu/views/home/home_zone_3/home_zone_3.dart';
-import 'package:mewnu/views/home/home_zone_4/home_zone_4.dart';
 import 'package:mewnu/views/components/navigator_controller.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({this.navigatorController});
+  HomePage({required this.navigatorController});
   final NavigatorController navigatorController;
   @override
   _HomePageState createState() => _HomePageState();
@@ -38,9 +35,9 @@ class _HomePageState extends State<HomePage> {
           navigatorController: widget.navigatorController,
           onTap: (i) => onTap(i),
         ),
-        HomeZone2(),
-        HomeZone3(),
-        HomeZone4(),
+        // HomeZone2(),
+        // HomeZone3(),
+        // HomeZone4(),
       ],
     );
   }

@@ -8,9 +8,9 @@ import 'package:mewnu/views/components/navigator_controller.dart';
 
 class NavigatorBar extends StatelessWidget {
   NavigatorBar({
-    this.onTap(i),
-    this.onIndexChanged,
-    this.navigatorController,
+    required this.onTap(i),
+    required this.onIndexChanged,
+    required this.navigatorController,
   });
   final int onIndexChanged;
   final void Function(int) onTap;

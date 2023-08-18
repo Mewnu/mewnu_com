@@ -1,12 +1,11 @@
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:mewnu/views/components/navigator_controller.dart';
-import "package:flutter_neumorphic/flutter_neumorphic.dart";
 
 class HomeZone1 extends StatefulWidget {
   HomeZone1({
-    this.navigatorController,
-    this.onTap(i),
+    required this.navigatorController,
+    required this.onTap(i),
   });
   final NavigatorController navigatorController;
   final void Function(int) onTap;
@@ -186,7 +185,7 @@ class _HomeZone1State extends State<HomeZone1> {
                           decoration: BoxDecoration(
                             border: Border(
                               top: BorderSide(
-                                color: Colors.grey[200],
+                                color: Colors.grey.shade200,
                                 width: _isHover || _showDeadlines ? 4 : 1,
                               ),
                             ),
